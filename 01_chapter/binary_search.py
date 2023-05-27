@@ -1,14 +1,13 @@
 from typing import Any, Union
 
 
-def binary_search(list_of_items: list, item: Any) -> Union[int, None]:
-    sorted_list_of_items = sorted(list_of_items)
+def binary_search(ordered_list_of_items: list, item: Any) -> Union[int, None]:
     low = 0
-    high = len(sorted_list_of_items) - 1
+    high = len(ordered_list_of_items) - 1
 
     while low <= high:
         mid = int((low + high) / 2)
-        guess = sorted_list_of_items[mid]
+        guess = ordered_list_of_items[mid]
 
         if guess == item:
             return mid
