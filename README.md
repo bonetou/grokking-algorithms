@@ -13,5 +13,5 @@ poetry install
 
 ## Run tests
 ```bash
-pytest
+poetry run pytest
 ```
