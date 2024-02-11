@@ -10,4 +10,4 @@ def test_should_find_correct_index():
 
 
 def test_should_return_none_when_item_is_not_on_given_list():
-    assert binary_search([1,2,3,4,5,6,7,8,9], 10) == None
+    assert binary_search([1,2,3,4,5,6,7,8,9], 10) == -1

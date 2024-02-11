@@ -1,21 +1,22 @@
-from typing import Any, Union
+from typing import Any
 
 
-def binary_search(ordered_list_of_items: list, item: Any) -> Union[int, None]:
+def binary_search(ordered_list_of_items: list, item: Any) -> int:
     low = 0
     high = len(ordered_list_of_items) - 1
 
     while low <= high:
-        mid = int((low + high) / 2)
+        mid = (low + high) // 2
         guess = ordered_list_of_items[mid]
 
         if guess == item:
             return mid
         
-        if guess > item:
+        elif guess > item:
             high = mid - 1
 
-        if guess < item:
+        elif guess < item:
             low = mid + 1
         
-    return None
+    return -1
+''
